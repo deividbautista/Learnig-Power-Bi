@@ -1,0 +1,3 @@
+*.json
+*.pbix
+/env

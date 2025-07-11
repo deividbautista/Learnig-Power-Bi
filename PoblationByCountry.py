@@ -15,7 +15,7 @@ records = data[1]
 
 df = pd.json_normalize(records)
 df = df[["country.id", "country.value", "value", "date"]]
-df.columns=["pais_id", "nombre_pais", "poblacion", "año"]
+df.columns = ["pais_id", "nombre_pais", "poblacion", "año"]
 df.dropna(inplace=True)
 
 df.to_json("poblacion.json", orient="records")
