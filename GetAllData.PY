@@ -1,7 +1,24 @@
 import requests
 import pandas as pd
+from SaveDataDoc import savDocData
 
-countries = ["ARG", "BRA", "MEX", "COL", "CHL", "PER", "ESP", "USA"]
+countries = [
+    "ARG",
+    "BRA",
+    "MEX",
+    "COL",
+    "CHL",
+    "PER",
+    "ESP",
+    "USA",
+    "CAN",
+    "GBR",
+    "JPN",
+    "AUS",
+    "UK",
+    "DEU",
+    "CHN",
+]
 indicators = {
     "NY.GDP.MKTP.CD": "PIB_total_USD",
     "NY.GDP.PCAP.CD": "PIB_per_capita_USD",
@@ -48,7 +65,8 @@ if not endData.empty:
     # Llenamos los valores vacios con 0
     finalData = finalData.fillna(0)
 
+    savDocData(finalData, "data", "datafull.json")
     # Guardar como JSON (orientación "records" para lista de diccionarios)
-    finalData.to_json("data.json", orient="records")
+    # finalData.to_json("data.json", orient="records")
 else:
     print("No se encontraron datos para los filtros aplicados.")
