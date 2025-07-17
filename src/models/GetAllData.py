@@ -1,6 +1,6 @@
 import requests
 import pandas as pd
-from SaveDataDoc import savDocData
+from models.SaveDataDoc import savDocData
 
 countries = [
     "ARG",
