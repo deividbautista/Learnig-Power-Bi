@@ -1,9 +1,10 @@
 from models.GetAllData import getAllData
+from models.ctoMongo import ConMongo
 
 def main():
     try:
         # Obtener datos
-        data = getAllData()  # Nota los paréntesis para llamar a la función
+        data = ConMongo()  # Nota los paréntesis para llamar a la función
         
         # Procesar datos
         processed_data = process_data(data)
