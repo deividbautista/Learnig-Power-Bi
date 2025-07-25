@@ -65,7 +65,7 @@ if not endData.empty:
     # Llenamos los valores vacios con 0
     finalData = finalData.fillna(0)
 
-    savDocData(finalData, "data", "datafull.json")
+    savDocData(finalData, "datafull.json")
     # Guardar como JSON (orientación "records" para lista de diccionarios)
     # finalData.to_json("data.json", orient="records")
 else:

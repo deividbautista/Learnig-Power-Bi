@@ -12,7 +12,5 @@ def ConMongo():
     data = list(collection.find())
 
     json_data = dumps(data)
-
-    with open("data.json", "w", encoding="utf-8") as f:
-        f.write(json_data)
-
+    
+    return json_data
